@@ -1,6 +1,6 @@
 const CONFIG = {
     "site": "https://www.hagik.net",
-    "policy": "https://www.hagik.net/genpolicy/policy.html",
+    "policy": "https://www.hagik.net/u/packages/genpolicy/policy.html",
     "message": "This site uses cookies to provide to you some services. If you want to know more about Privacy & Cookie Policy, click the link. By closing this banner, or by continuing to browse, you accept our Policy.",
     "button_ok": "OK",
     "button_readmore": "Read more"
@@ -37,7 +37,13 @@ function init() {
     container.appendChild(text);
     container.appendChild(readmore);
     container.appendChild(confirm);
-    domElement.appendChild(container);
+    
+    if(domElement) {
+        domElement.appendChild(container);
+    }
+    else {
+        document.querySelector("html").appendChild(container);
+    }
 
     setStyle();
 }
@@ -55,6 +61,7 @@ function setStyle(otherCSS) {
         width: 80%;
         font-family: Roboto, calibri, arial, sans-serif;
         padding: 20px;
+        font-size: 15px;
         border-radius: 4px;
         animation: hpolicy 1s;
     }
