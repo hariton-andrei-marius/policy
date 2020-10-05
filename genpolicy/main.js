@@ -89,11 +89,13 @@ function setStyle(otherCSS) {
     .hpolicy__confirm:hover,
     .hpolicy__readmore:hover {
         background: #DDD;
+        color: #000;
     }
 
     .hpolicy__confirm:active,
     .hpolicy__readmore:active {
         background: #AAA;
+        color: #000;
     }
 
     @keyframes hpolicy {
