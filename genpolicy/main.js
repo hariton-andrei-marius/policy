@@ -1,7 +1,7 @@
 const CONFIG = {
     "site": "https://www.hagik.net",
     "policy": "https://www.hagik.net/u/packages/genpolicy/policy.html",
-    "message": "This site uses cookies to provide to you some services. If you want to know more about Privacy & Cookie Policy, click the link. By closing this banner, or by continuing to browse, you accept our Policy.",
+    "message": "This site uses cookies to provide to you some services. If you want to know more about Privacy & Cookie Policy and our Terms Of Use, click the link. By closing this banner, or by continuing to browse, you accept our Terms Of Use and our Policy.",
     "button_ok": "OK",
     "button_readmore": "Read more"
 };
