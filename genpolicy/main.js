@@ -59,6 +59,7 @@ function setStyle(otherCSS) {
         background: #000;
         color: #FFF;
         width: 80%;
+        max-width: 800px;
         font-family: Roboto, calibri, arial, sans-serif;
         padding: 20px;
         font-size: 15px;
