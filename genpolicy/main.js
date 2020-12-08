@@ -1,6 +1,6 @@
 const CONFIG = {
-    "site": "https://www.hagik.net",
-    "policy": "https://www.hagik.net/u/packages/genpolicy/policy.html",
+    "sites": ["http://hagik.altervista.org", "https://hagik.altervista.org"],
+    "policy": "https://hagik.altervista.org/u/packages/genpolicy/policy.html",
     "message": "This site uses cookies to provide to you some services. If you want to know more about Privacy & Cookie Policy and our Terms Of Use, click the link. By closing this banner, or by continuing to browse, you accept our Terms Of Use and our Policy.",
     "button_ok": "OK",
     "button_readmore": "Read more"
@@ -8,8 +8,15 @@ const CONFIG = {
 
 function start() {
     let cookies = document.cookie;
+    let isRightSite = false;
+    
+    for(let i = 0; i < CONFIG.sites.length; i++) {
+    	if(window.location.origin === CONFIG.sites[i]) {
+        	isRightSite = true;
+        }
+    }
 
-    if (!cookies.includes("hpolicy=1") && window.location.origin === CONFIG.site) {
+    if (!cookies.includes("hpolicy=1") && isRightSite) {
         init();
     }
 }
